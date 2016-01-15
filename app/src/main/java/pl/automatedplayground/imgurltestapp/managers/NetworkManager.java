@@ -8,6 +8,7 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import pl.automatedplayground.imgurltestapp.model.ImagesList;
@@ -73,10 +74,9 @@ public class NetworkManager {
     /**
      * Get images from album
      *
-     * @param albumId
      * @param returnMethod
      */
-    public void getImages(String albumId, final Callback<List<Image>> returnMethod) {
+    public void getImages(final Callback<ArrayList<Image>> returnMethod) {
         mApi.getViralImages().enqueue(new retrofit.Callback<ImagesList>() {
             @Override
             public void onResponse(Response<ImagesList> response, Retrofit retrofit) {

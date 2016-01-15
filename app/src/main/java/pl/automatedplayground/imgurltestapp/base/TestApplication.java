@@ -2,6 +2,8 @@ package pl.automatedplayground.imgurltestapp.base;
 
 import android.app.Application;
 
+import com.squareup.picasso.Picasso;
+
 import pl.automatedplayground.imgurltestapp.managers.NetworkManager;
 
 /**

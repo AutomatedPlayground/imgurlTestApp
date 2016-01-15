@@ -3,10 +3,12 @@ package pl.automatedplayground.imgurltestapp.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by adrian on 15.01.16.
  */
-public class Image {
+public class Image implements Serializable {
     @Expose
     @SerializedName("id")
     private String id;
@@ -18,7 +20,7 @@ public class Image {
     private String description;
     @Expose
     @SerializedName("datetime")
-    private Integer datetime;
+    private Long datetime;
     @Expose
     @SerializedName("nsfw")
     private Boolean nsfw;
@@ -33,55 +35,66 @@ public class Image {
         return id;
     }
 
-    public void setId(String id) {
+    public Image setId(String id) {
         this.id = id;
+        return this;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
+    public Image setTitle(String title) {
         this.title = title;
+        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public Image setDescription(String description) {
         this.description = description;
+        return this;
     }
 
-    public Integer getDatetime() {
+    public Long getDatetime() {
         return datetime;
     }
 
-    public void setDatetime(Integer datetime) {
+    public Image setDatetime(Long datetime) {
         this.datetime = datetime;
+        return this;
     }
 
     public Boolean getNsfw() {
         return nsfw;
     }
 
-    public void setNsfw(Boolean nsfw) {
+    public Image setNsfw(Boolean nsfw) {
         this.nsfw = nsfw;
+        return this;
     }
 
     public Boolean getFavourite() {
         return favourite;
     }
 
-    public void setFavourite(Boolean favourite) {
+    public Image setFavourite(Boolean favourite) {
         this.favourite = favourite;
+        return this;
     }
 
     public String getLink() {
         return link;
     }
 
-    public void setLink(String link) {
+    public Image setLink(String link) {
         this.link = link;
+        return this;
+    }
+
+    public String getLinkForBiggerImage() {
+        return link.replace(".jpg","l.jpg");
     }
 }

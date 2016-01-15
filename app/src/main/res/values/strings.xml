@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ImgUrlTestApp</string>
+    <string name="title_activity_image_details">ImageDetails</string>
 </resources>

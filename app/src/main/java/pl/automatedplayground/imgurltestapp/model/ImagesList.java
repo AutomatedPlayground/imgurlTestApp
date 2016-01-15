@@ -3,6 +3,7 @@ package pl.automatedplayground.imgurltestapp.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,9 +12,9 @@ import java.util.List;
 public class ImagesList {
     @Expose
     @SerializedName("data")
-    private List<Image> data;
+    private ArrayList<Image> data;
 
-    public List<Image> getData() {
+    public ArrayList<Image> getData() {
         return data;
     }
 }
